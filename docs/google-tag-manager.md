@@ -15,8 +15,8 @@
 - Event name: .* (regex.* triggers all types of events eg pageview, clicks, user engagement… )
 - Tick 'Use regex matching'
 - This trigger fires on: Some Custom Event
-- Fire this trigger when GDPR consent level __matches__ RegEX `^(undefined|null|0|false|NaN|)$`
-- `(^(undefined|null|0|false|NaN|)$` = RegEx to indicate that the cookie must have a value that is equel to  0, null, undefinded, false…)
+- Fire this trigger when GDPR consent level __matches__ RegEX `^(undefined|null|0|false|NaN|none)$`
+- `(^(undefined|null|0|false|NaN|none)$` = RegEx to indicate that the cookie must have a value that is equal to 0, null, undefinded, none, false…)
 
 ![Create GDPR - has not given consent variable](img/step2.png?raw=true "Create GDPR - has not given consent variable")
 
@@ -40,8 +40,8 @@ _Tag with some settings already set after config_
 - Event name: .* 
 - Tick 'Use regex matching'
 - This trigger fires on: Some Custom Event
-- Fire this trigger when GDPR Consent Level __does not match__ RegEx `2|true`
-- (`2|true` = RegEx to indicate that the cookie can't have the value 2 OR true/1, this does mean that in combination with the previous exception, the value of the cookie should be 3 to fire the tag.)
+- Fire this trigger when GDPR Consent Level __does not match__ RegEx `marketing|none`
+- (`analytics|all` = RegEx to indicate that the cookie can't have the value marketing OR none, this does mean that in combination with the previous exception, the value of the cookie should be analytics or all to fire the tag.)
 
 ![Create analytic cookie trigger](img/step4.png?raw=true "Create analytic cookie trigger") 
 
@@ -56,9 +56,9 @@ Examples of analytic cookies are: Google Analytics, Hotjar, Matomo Analytics,...
 - Event name: .* 
 - Tick 'Use regex matching'
 - This trigger fires on: Some Custom Event
-- Fire this trigger when GDPR Consent level __does not match__ RegEx `3|true`
+- Fire this trigger when GDPR Consent level __does not match__ RegEx `analytics|none`
 
-(`3|true` = RegEx to indicate that the cookie can't have the value 3 OR true/1 , this does mean that in combination with the previous exception, the value of the cookie should be 2 to fire the tag.)
+(`analytics|none` = RegEx to indicate that the cookie can't have the value analytics OR none , this does mean that in combination with the previous exception, the value of the cookie should be 2 to fire the tag.)
 
 ![Add marketing trigger](img/step6.png?raw=true "Add marketing trigger") 
 
