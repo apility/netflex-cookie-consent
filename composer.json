@@ -1,0 +1,36 @@
+{
+    "name": "apility/netflex-cookie-consent",
+    "description": "Cookie consent modal for EU for use with Netflex SDK",
+    "authors": [
+        {
+            "name": "Kristof Serré",
+            "email": "kristof@statik.be",
+            "homepage": "https://www.statik.be"
+        },
+        {
+            "name": "Olav Øyen",
+            "email": "olav@apility.no",
+            "homepage": "https://www.apility.no"
+        }
+    ],
+    "homepage": "https://github.com/apility/netflex-cookie-consent",
+    "keywords": ["Laravel", "cookie", "gdpr", "netflex"],
+    "license": "MIT",
+    "require": {
+        "php": "^7.0|^8.0",
+        "illuminate/http": "^8.0|^9.0",
+        "illuminate/support": "^8.0|^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Statikbe\\CookieConsent\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Statikbe\\CookieConsent\\CookieConsentServiceProvider"
+            ]
+        }
+    }
+}
