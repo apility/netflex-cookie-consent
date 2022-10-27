@@ -3,7 +3,7 @@
 ## Step 1: Create new variable
 - Name: `GDPR Consent level` 
 - Variable type: 1st Party Cookie
-- Cookie Name: `__cookie_consent`
+- Cookie Name: `__{site_name}_cookie_consent`
 
 ***If you change your cookie name in `cookie-consent.php`, don't forget to change this one too!***
 
