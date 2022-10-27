@@ -6,7 +6,7 @@ return [
     'cookie_key' => '__' . Str::slug(env('APP_NAME', 'netflex'), '_') . '_cookie_consent',
     'cookie_value_analytics' => 'analytics',
     'cookie_value_marketing' => 'marketing',
-    'cookie_value_both' => 'both',
+    'cookie_value_both' => 'all',
     'cookie_value_none' => 'none',
     'cookie_expiration_days' => '365',
     'gtm_event' => 'cookie_refresh',
