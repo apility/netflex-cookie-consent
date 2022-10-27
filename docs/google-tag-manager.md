@@ -40,8 +40,8 @@ _Tag with some settings already set after config_
 - Event name: .* 
 - Tick 'Use regex matching'
 - This trigger fires on: Some Custom Event
-- Fire this trigger when GDPR Consent Level __does not match__ RegEx `marketing|none`
-- (`marketing|none` = RegEx to indicate that the cookie can't have the value marketing OR none, this does mean that in combination with the previous exception, the value of the cookie should be analytics or all to fire the tag.)
+- Fire this trigger when GDPR Consent Level __matches__ RegEX `analytics|all`
+- (`analytics|all` = RegEx to indicate that the cookie should be analytics or all to fire the tag.)
 
 ![Create analytic cookie trigger](img/step4.png?raw=true "Create analytic cookie trigger") 
 
@@ -56,9 +56,9 @@ Examples of analytic cookies are: Google Analytics, Hotjar, Matomo Analytics,...
 - Event name: .* 
 - Tick 'Use regex matching'
 - This trigger fires on: Some Custom Event
-- Fire this trigger when GDPR Consent level __does not match__ RegEx `analytics|none`
+- Fire this trigger when GDPR Consent level __matches__ RegEX `marketing|all`
 
-(`analytics|none` = RegEx to indicate that the cookie can't have the value analytics OR none , this does mean that in combination with the previous exception, the value of the cookie should be 2 to fire the tag.)
+(`marketing|all` = RegEx to indicate that the cookie should be marketing or all to fire the tag.)
 
 ![Add marketing trigger](img/step6.png?raw=true "Add marketing trigger") 
 
