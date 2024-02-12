@@ -173,6 +173,8 @@ php artisan vendor:publish --provider="Statikbe\CookieConsent\CookieConsentServi
 ## Configure Google Tag Manager
 All the steps to configure your Google Tag Manager can be found [here](docs/google-tag-manager.md).
 
+## Configure Google Tag Manager with consent mode v2
+All the steps to configure your Google Tag Manager with consent mode v2 can be found [here](docs/google-tag-manager-consentmode.md).
 
 ## Security
 
