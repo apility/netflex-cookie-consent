@@ -4,6 +4,7 @@ use Illuminate\Support\Str;
 
 return [
     'cookie_key' => '__' . Str::slug(env('APP_NAME', 'netflex'), '_') . '_cookie_consent',
+    'cookie_domain' => env('SESSION_DOMAIN', null),
     'cookie_value_analytics' => 'analytics',
     'cookie_value_marketing' => 'marketing',
     'cookie_value_both' => 'all',
