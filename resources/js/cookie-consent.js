@@ -29,6 +29,7 @@ const COOKIE_VALUE_NONE = modalAlert.dataset.cookieValueNone || 'false';
 const COOKIE_VALUE_BOTH = modalAlert.dataset.cookieValueBoth || 'true';
 const COOKIE_EXPIRATION_DAYS = modalAlert.dataset.cookieExpirationDays || '365';
 const GTM_EVENT = modalAlert.dataset.gtmEvent || 'pageview';
+const COOKIE_DOMAIN = modalAlert.dataset.cookieDomain || null;
 
 const ignoredPaths = modalAlert.dataset.ignoredPaths || null;
 
@@ -150,7 +151,7 @@ function saveSettings() {
 
 function updateCookie(cookieValue) {
 
-    setCookie(COOKIE_KEY, COOKIE_EXPIRATION_DAYS, cookieValue);
+    setCookie(COOKIE_KEY, COOKIE_EXPIRATION_DAYS, cookieValue, COOKIE_DOMAIN);
 
     //  Fire GTM event if dataLayer is found
     if (window.dataLayer) {

@@ -16,10 +16,11 @@ export function getCookie(key) {
     );
 }
 
-export function setCookie(key, expireDays, value) {
+export function setCookie(key, expireDays, value, domain) {
 
     const date = new Date();
     let expires = null;
+    let cookieDomain = null;
 
     if (expireDays) {
 
@@ -27,6 +28,11 @@ export function setCookie(key, expireDays, value) {
 
         expires = date.toUTCString();
     }
+    
+    if(domain) {
+        cookieDomain = `domain=${domain};`;
+    }
+        
+    document.cookie = `${encodeURIComponent(key)}=${encodeURIComponent(value)}${expires ? `; expires=${expires}` : ''}; path=/; secure; ${cookieDomain}`;
 
-    document.cookie = `${encodeURIComponent(key)}=${encodeURIComponent(value)}${expires ? `; expires=${expires}` : ''}; path=/`;
 }
