@@ -29,7 +29,7 @@ You can find our upgrading guides [here](upgrading.md).
 You can install the package via composer:
 
 ``` bash
-composer require statikbe/laravel-cookie-consent
+composer require apility/netflex-cookie-consent
 ```
 
 The package will automatically register itself.
@@ -138,12 +138,13 @@ This will read the policy urls from your env.
 ```php
 return [
     'cookie_key' => '__cookie_consent',
-    'cookie_value_analytics' => '2',
-    'cookie_value_marketing' => '3',
-    'cookie_value_both' => 'true',
-    'cookie_value_none' => 'false',
+    'cookie_domain' => env('SESSION_DOMAIN'),
+    'cookie_value_analytics' => 'analytics',
+    'cookie_value_marketing' => 'marketing',
+    'cookie_value_both' => 'all',
+    'cookie_value_none' => 'none',
     'cookie_expiration_days' => '365',
-    'gtm_event' => 'pageview',
+    'gtm_event' => 'cookie_refresh',
     'ignored_paths' => [],
     'policy_url_en' => env('COOKIE_POLICY_URL_EN', null),
     'policy_url_fr' => env('COOKIE_POLICY_URL_FR', null),
